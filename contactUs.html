@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactUs.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="contactUs.html">Contact Us</a>
+        <a href="aboutMe.html">About Me</a>
+    </header>
+    <main>
+        <h1>Get In Touch</h1>
+        <form data-testid="test-contact-form" id="contact-form" action="">
+            <div class="userDetails">
+                <label for="fullName">Full Name:</label>
+                <input
+                data-testid="test-contact-name" 
+                type="text" 
+                name="fullName" 
+                id="fullName" 
+                required aria-required="true">
+
+                <label for="email" >Email:</label>
+                <input
+                data-testid="test-contact-email" 
+                type="email" 
+                name="email" 
+                id="email"
+                aria-describedby="email-error" 
+                required>
+                <p data-testid="test-contact-error-email" id="email-error"></p>
+
+            </div>
+            <div class="messageDesc">
+                <label for="subject">Subject:</label>
+                <input
+                data-testid="test-contact-subject" 
+                type="text" 
+                name="subject" 
+                id="subject" 
+                required  aria-required="true">
+
+                <label for="message">Message:</label>
+                <textarea 
+                data-testid="test-contact-message" 
+                name="message" 
+                id="message" 
+                required aria-required="true" 
+                aria-describedby="message-error"
+                ></textarea>
+                <p data-testid="test-contact-error-message" id="message-error"></p>
+
+            </div>
+            
+            <input class="btn" data-testid="test-contact-submit" type="submit" value="Submit">
+            
+        </form>
+        <p id="success" data-testid="test-contact-success"></p>
+    </main>
+
+
+    <script src="contactUs.js"></script>
+</body>
+</html>
